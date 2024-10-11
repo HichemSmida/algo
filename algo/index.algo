@@ -1,0 +1,48 @@
+ALGORITHM sentence
+VAR
+    s: STRING
+    i,j: INTEGER
+    slenght: INTEGER
+    charnum: INTEGER
+    wordsnum: INTEGER
+    vowelsnum: INTEGER
+    vowels_array: array_name : ARRAY_OF STRING[];
+
+BEGIN
+    write("write something")
+    read(s)
+    //lenght
+    slenght := 0
+    FOR i FROM 1 TO s.lenght-1   DO
+        slenght := slenght+1
+    END_FOR
+    write("the lenght of the word ",slenght)
+    //number of char
+
+    char :=0
+    FOR i FROM 1 TO s.lenght-1   DO
+        IF (s[i]!=" ") THEN
+            charnum := charnum+1
+        END_IF
+    END_FOR
+    write("the number of chars",charnum)
+    //number of words
+    FOR i FROM 1 TO s.lenght  DO
+        IF (s[i]!=" ") THEN
+            wordsnum := wordsnum+1
+        END_IF
+    END_FOR
+     write("the number of words",wordsnum)
+ 
+//number of vowels 
+vowels_array:=["a","e","i","o","u","A","E","I","O","U"]
+vowels:=0
+FOR i FROM 1 TO s.length DO
+    FOR j FROM 1 TO vowels_array.length DO
+        IF (s[i] == vowels_array[j]) THEN
+        vowelsnum:=vowelsnum+1
+        END_IF
+    END_FOR
+END_FOR
+
+END
